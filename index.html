@@ -1,296 +1,463 @@
 <!DOCTYPE html><html lang="en" data-scrapbook-source="https://de-bridge.github.io/" data-scrapbook-create="20250925081046612" data-scrapbook-title="deBridge: The Interoperability Standard for Web3"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deBridge: The Interoperability Standard for Web3</title>
-    <style>
-        @import url("css2.css");
-        @import url("all.min.css");
+     <title>Pawswap Network</title>
+    <link rel="icon" type="image/png" href="hdKN1qx__400x400.jpg">                                                 
+<style>
+    @import url("css2.css");
+    @import url("all.min.css");
 
-        :root {
-            --primary-color: #793EF5;
-            --secondary-color: #64C5B9;
-            --bg-dark: #1A1A2E;
-            --bg-light: #24243e;
-            --text-color: #E0E0E0;
-            --card-color: #292945;
-            --accent-glow: #793EF5;
-        }
+    :root {
+        --primary-color: #FF7AC3;   /* Paw-vibe pink */
+        --secondary-color: #7AD3FF; /* Cool cyan */
+        --bg-dark: #0F1221;
+        --bg-light: #1B1F3A;
+        --text-color: #E6E7EF;
+        --card-color: #171A31;
+        --accent-glow: #FF7AC3;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .header-bg {
-            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
-            padding: 100px 20px 80px;
-            text-align: center;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            color: #b0b0b0;
-        }
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-color);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-        section {
-            padding: 50px 20px;
-            margin-bottom: 40px;
-            background-color: var(--card-color);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .header-bg {
+        background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
+        padding: 100px 20px 80px;
+        text-align: center;
+    }
 
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        }
-        
-        h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        p, ul {
-            font-size: 1rem;
-            color: #c0c0c0;
-            margin-bottom: 15px;
-        }
-        
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        ul li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-        }
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        ul li::before {
-            content: "\f058"; 
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-        }
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+    }
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+    .tagline {
+        font-size: 1.2rem;
+        max-width: 760px;
+        margin: 0 auto;
+        color: #b8bbd9;
+    }
 
-        a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
+    section {
+        padding: 50px 20px;
+        margin-bottom: 40px;
+        background-color: var(--card-color);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #fff;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(121, 62, 245, 0.4);
-        }
+    section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(121, 62, 245, 0.6);
-        }
+    h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
 
-        /* FAQ */
-        .faq-item {
-            background-color: var(--bg-light);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 20px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s;
-        }
-        
-        .faq-question:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            transition: transform 0.3s;
-        }
-        
-        .faq-question.active::after {
-            content: '–';
-            transform: rotate(180deg);
-        }
-        
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 20px;
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-            background-color: var(--bg-dark);
-        }
-        
-        .faq-answer p {
-            padding-top: 10px;
-            padding-bottom: 20px;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: auto;
-        }
-        
-        .social-links a {
-            color: var(--text-color);
-            margin: 0 15px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--primary-color);
-        }
-    </style>
+    h3 {
+        font-size: 1.35rem;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        color: var(--secondary-color);
+    }
+
+    p, ul, ol {
+        font-size: 1rem;
+        color: #cfd1e6;
+        margin-bottom: 14px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+    }
+
+    ul li::before {
+        content: "\f058";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--secondary-color);
+        font-size: 1.05rem;
+        top: 2px;
+    }
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #0f1221;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 15px rgba(122, 211, 255, 0.25);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(255, 122, 195, 0.35);
+    }
+
+    /* Small highlight cards / badges */
+    .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 8px;
+        background: rgba(122, 211, 255, 0.1);
+        border: 1px solid rgba(122, 211, 255, 0.25);
+        color: #cfeeff;
+        font-size: 0.85rem;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* FAQ */
+    .faq-item {
+        background-color: var(--bg-light);
+        border-radius: 10px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+    }
+
+    .faq-question {
+        padding: 18px 20px;
+        font-weight: 600;
+        font-size: 1.05rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+
+    .faq-question:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .faq-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        transition: transform 0.3s;
+    }
+
+    .faq-question.active::after {
+        content: '–';
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        background-color: var(--bg-dark);
+    }
+
+    .faq-answer p, .faq-answer ul {
+        padding-top: 10px;
+        padding-bottom: 18px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: auto;
+    }
+
+    .social-links a {
+        color: var(--text-color);
+        margin: 0 14px;
+        font-size: 1.4rem;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: var(--primary-color);
+    }
+</style>
 </head>
 <body>
     <div class="header-bg">
         <div class="container">
-            <h1>deBridge: The Interoperability Standard for Web3</h1>
-            <p class="tagline">A secure and seamless infrastructure for cross-chain asset and data transfers, empowering the next generation of decentralized applications.</p>
+            <h1>Pawswap Network - Layer 3 Blockchain for DeFi</h1>
+            <p class="tagline">
+                Aggregate liquidity, minimize slippage, and execute safer swaps across EVM chains.
+                PawSwap routes orders intelligently via AMMs and RFQ makers, with optional MEV-aware protections, limit orders, and DCA.
+            </p>
+            <div style="margin-top:18px">
+                <span class="badge">EVM Chains</span>
+                <span class="badge">Smart Order Routing</span>
+                <span class="badge">RFQ Liquidity</span>
+                <span class="badge">Limit Orders</span>
+                <span class="badge">DCA</span>
+                <span class="badge">MEV-Aware</span>
+            </div>
+            <div style="margin-top:26px">
+                <a class="cta-button" href="#" target="_blank" rel="noopener nofollow">Open PawSwap →</a>
+            </div>
         </div>
     </div>
 
     <div class="container">
+        <!-- Protocol Overview -->
         <section id="protocol-overview">
-            <h2>The deBridge Protocol: A Technical Deep Dive</h2>
-            <p>At its core, deBridge is a decentralized protocol and infrastructure platform designed to facilitate secure and reliable value transfer across various blockchains. Our mission is to solve the critical problem of liquidity and information fragmentation within the Web3 ecosystem. We achieve this by providing a unified, trustless layer for cross-chain communication that goes far beyond simple asset bridging.</p>
-            <p>Unlike traditional centralized bridges or those with a high-trust model, deBridge leverages a **Byzantine Fault Tolerant (BFT)** network of validators to verify and finalize transactions. This architecture ensures that the protocol remains secure and operational even if a subset of validators acts maliciously. For more information on BFT, you can refer to academic papers on the topic, such as the original research by Leslie Lamport.</p>
-
-            <h3>Core Architectural Components</h3>
+            <h2>PawSwap Overview: Architecture & Execution Model</h2>
+            <p>
+                PawSwap is a non-custodial, smart-order-routing layer designed to search across AMMs and RFQ makers
+                to deliver competitive, <em>effective</em> prices (output after fees, slippage, and gas).
+                The router evaluates multiple paths (single-hop, multi-hop, split-order) and can request firm or indicative quotes
+                from integrated market makers, selecting the route that maximizes expected value under your slippage bound.
+            </p>
+            <h3>Core Components</h3>
             <ul>
-                <li><strong>Relayer Network:</strong> Our network of independent relayer nodes monitors events on a source blockchain and sends cryptographically signed proofs to the destination blockchain.</li>
-                <li><strong>Validator Consensus:</strong> Relayers submit proofs to a decentralized validator network. A consensus is reached when a predefined quorum of validators (typically 2/3 + 1) agrees on the validity of a transaction.</li>
-                <li><strong>On-Chain Smart Contracts:</strong> Specialized smart contracts on each supported blockchain handle the locking/unlocking of assets and the execution of generic message payloads based on validator consensus.</li>
+                <li><strong>Route Planner:</strong> Generates candidate paths across AMMs (stable/volatile pools) and optionally splits size across venues to reduce price impact.</li>
+                <li><strong>RFQ Layer:</strong> Queries connected liquidity partners for firm quotes on specific pairs/size; useful for large or illiquid routes.</li>
+                <li><strong>Execution Kernel:</strong> Encodes approvals + swap calls, respects your slippage limit, and fails fast on adverse re-quotes.</li>
+                <li><strong>Risk & Validation:</strong> Token list and contract checks (user-provided and curated lists), minimum-approval policy, and route sanity checks (no unknown targets).</li>
             </ul>
+
+            <h3>What “Best Execution” Means in Practice</h3>
+            <p>
+                “Best execution” is not just highest quoted output; it’s the balance of:
+            </p>
+            <ul>
+                <li><strong>Price impact:</strong> Larger size moves the pool; split-routes can smooth impact.</li>
+                <li><strong>Explicit fees:</strong> AMM fee tiers and any interface/partner fees shown in the UI.</li>
+                <li><strong>Gas cost:</strong> More hops and complex paths cost more gas; the router weighs net outcome.</li>
+                <li><strong>Fill risk:</strong> RFQ firm quotes vs. indicative AMM quotes under volatile conditions.</li>
+            </ul>
+
+            <h3>MEV-Aware Flow</h3>
+            <p>
+                PawSwap supports an MEV-aware workflow: tight slippage, optional private/builder RPCs (where available),
+                and order-splitting for larger trades. This reduces exposure to sandwiching and adverse selection.
+            </p>
         </section>
 
+        <!-- Security -->
         <section id="security">
-            <h2>Unwavering Commitment to Security</h2>
-            <p>Security is the foundation of deBridge. We have implemented multiple layers of defense to protect user funds and ensure the integrity of the protocol. Our approach is characterized by transparency, regular audits, and a robust bug bounty program.</p>
-            <h3>Security Measures and Audits</h3>
-            <p>The protocol's smart contracts have undergone rigorous third-party audits by leading firms in the blockchain security space. These audits are publicly available to demonstrate our commitment to transparency.</p>
+            <h2>Security, Trust Boundaries & Operational Safety</h2>
+            <p>
+                PawSwap is non-custodial: swaps settle directly on-chain to your wallet. Still, routing and approvals carry risks.
+                The design principle is <em>minimize trust</em> in off-chain components and surface all costs/approvals explicitly.
+            </p>
+            <h3>Key Safety Practices</h3>
             <ul>
-                <li><strong>Halborn:</strong> A comprehensive review of our core smart contracts and protocol logic.</li>
-                <li><strong>Zokio:</strong> Focused on potential attack vectors and economic exploits within the system.</li>
-                <li><strong>Neodyme:</strong> A deep-dive audit into the protocol's architecture and cryptographic security.</li>
+                <li><strong>Verified Contracts:</strong> Always match token addresses using reputable explorers (Etherscan, Arbiscan, BscScan, Polygonscan).</li>
+                <li><strong>Allowance Hygiene:</strong> Approve the minimum needed for execution; periodically revoke stale allowances.</li>
+                <li><strong>Hardware Wallets:</strong> Prefer Ledger/Trezor for material balances; verify destination and amounts on-device.</li>
+                <li><strong>Phishing Defense:</strong> Bookmark the official app/docs; avoid signing opaque or arbitrary approvals.</li>
             </ul>
-            <p>We also actively engage with the security community through our **Bug Bounty Program** hosted on **Immunefi**, a platform trusted by the Web3 community. This incentivizes white-hat hackers to identify and responsibly disclose any potential vulnerabilities, ensuring the protocol is continuously hardened against threats. <a href="https://immunefi.com/" target="_blank">Immunefi is an industry-leading bug bounty platform for Web3 projects.</a></p>
+            <h3>Threat Model & Mitigations</h3>
+            <ul>
+                <li><strong>Sandwich/Front-run:</strong> Tight slippage, private mempool/builder relays where supported, and break large orders into chunks.</li>
+                <li><strong>Re-entrancy / Bad Targets:</strong> Router only calls audited or allow-listed functions; token list validation reduces unknown calls.</li>
+                <li><strong>Price Oracles:</strong> Execution does not depend on a single oracle; on-chain AMMs/quotes are the source of truth at settlement.</li>
+            </ul>
         </section>
 
+        <!-- Functions -->
         <section id="functions">
-            <h2>Advanced Protocol Functions</h2>
-            <p>deBridge is built to be a versatile tool for both users and developers. Its capabilities extend far beyond simple token swaps.</p>
-            <h3>Generic Message Passing</h3>
-            <p>This is a core feature of deBridge. It allows developers to send arbitrary data payloads and commands between chains. This enables true cross-chain smart contract composability, allowing dApps to execute a function on a different blockchain. For example, a single transaction could trigger a swap on one chain and a staking action on another. <a href="https://docs.debridge.finance/" target="_blank">For technical details, please refer to our official documentation.</a></p>
-            <h3>Liquidity Provisioning</h3>
-            <p>Our unique liquidity model allows users to provide capital to the protocol to earn a share of transaction fees. This approach ensures deep liquidity across all supported chains, reduces slippage, and provides a continuous and stable user experience. Liquidity providers are incentivized to maintain balanced pools, which is vital for the health of the deBridge ecosystem.</p>
+            <h2>Power Features for Traders & Integrators</h2>
+            <h3>Smart Order Routing</h3>
+            <p>
+                The router evaluates <strong>single-hop</strong> (A→B), <strong>multi-hop</strong> (A→WETH→B),
+                and <strong>split-route</strong> executions (A→B across multiple pools) to minimize price impact and slippage.
+                Routes are scored on expected output <em>net of gas and fees</em>.
+            </p>
+
+            <h3>RFQ (Request-For-Quote)</h3>
+            <p>
+                For larger sizes or illiquid pairs, connected market makers can return <em>firm</em> quotes for a given size/time window.
+                If the RFQ is better than AMM paths after gas, the router selects it; otherwise, it falls back to AMMs.
+            </p>
+
+            <h3>Limit Orders & DCA (if enabled in your UI)</h3>
+            <ul>
+                <li><strong>Limit Orders:</strong> Specify a target price; orders trigger when market meets your threshold. Expect partial fills or expiry in volatile markets.</li>
+                <li><strong>DCA:</strong> Schedule recurring buys/sells to reduce timing risk; ensure you keep gas funds across legs.</li>
+            </ul>
+
+            <h3>Cross-Chain Options</h3>
+            <p>
+                PawSwap focuses on same-chain best execution. For cross-chain, use reputable bridges/routers (or integrated partners where available),
+                then execute locally via PawSwap to optimize entry/exit pricing.
+            </p>
+
+            <h3>Developer Notes</h3>
+            <ul>
+                <li>Stateless routing requests with deterministic calldata.</li>
+                <li>Clear revert reasons on failed slippage or allowance checks.</li>
+                <li>Event logs for route selection, cost breakdown, and realized output (for analytics).</li>
+            </ul>
+
+            <h3>Execution Quality Metrics (What to Track)</h3>
+            <ul>
+                <li><strong>Quoted vs. Realized Output:</strong> Δ after settlement and rebasing/fee effects.</li>
+                <li><strong>Price Impact:</strong> Execution price vs. mid-price before submission.</li>
+                <li><strong>Effective Cost:</strong> (Gas + Pool Fees + Partner Fees − RFQ improvements) per unit transacted.</li>
+                <li><strong>Cancel/Fail Rate:</strong> Useful to tune slippage and RPCs for your environment.</li>
+            </ul>
         </section>
 
+        <!-- Practical Guide / Runbook -->
+        <section id="runbook">
+            <h2>Practical Runbook: Getting Best Results</h2>
+            <h3>Before You Swap</h3>
+            <ul>
+                <li>Keep native gas token on hand (ETH/ARB/MATIC/BNB) for approvals + swap.</li>
+                <li>Verify the token address, decimals, and tax/fee flags if the token has transfer fees.</li>
+                <li>Start with a small test amount to validate route behavior.</li>
+            </ul>
+            <h3>Slippage & Gas Tips</h3>
+            <ul>
+                <li>Majors/liquid pairs: 0.1–0.5% slippage; niche tokens: wider depending on depth.</li>
+                <li>High-volatility windows: prefer RFQ or increase gas to reduce inclusion delay.</li>
+                <li>Large size: enable split-route and consider chunking the order.</li>
+            </ul>
+            <h3>Troubleshooting Matrix</h3>
+            <ul>
+                <li><strong>Revert: INSUFFICIENT_OUTPUT_AMOUNT</strong> → Slippage too tight or price moved; refresh route, nudge tolerance.</li>
+                <li><strong>Revert: TRANSFER_FROM_FAILED</strong> → Allowance/approval missing or token blocked; re-approve minimal amount.</li>
+                <li><strong>Stuck pending</strong> → RPC congestion; try a different RPC or speed up with higher priority fee.</li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">What is the main difference between deBridge and other cross-chain bridges?</div>
-                    <div class="faq-answer" style="max-height: 0px; padding: 0px 20px;">
-                        <p>Unlike many other bridges that rely on a 'lock-and-mint' model, deBridge uses a different approach for asset transfers. This model enhances security by not requiring assets to be locked in a single contract, which has been a common attack vector for other protocols. Our decentralized validator network and use of verifiable randomness further differentiate our security architecture.</p>
+                    <div class="faq-question">How is PawSwap different from using a single DEX?</div>
+                    <div class="faq-answer">
+                        <p>
+                            Single DEX = single pool/pricing source. PawSwap <em>aggregates</em> AMMs and RFQ makers, evaluates net outcome (after gas/fees),
+                            and can split across venues to lower price impact—especially important on larger trades or thin markets.
+                        </p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">What blockchains does deBridge support?</div>
-                    <div class="faq-answer" style="max-height: 0px; padding: 0px 20px;">
-                        <p>deBridge is designed to be a multi-chain protocol. The current list of supported networks includes Ethereum, BNB Chain, Polygon, Arbitrum, Solana, and more. Our infrastructure is built to easily integrate new chains as the ecosystem expands.</p>
+                    <div class="faq-question">What chains and tokens are supported?</div>
+                    <div class="faq-answer">
+                        <p>
+                            PawSwap targets major EVM chains (e.g., Ethereum, Arbitrum, Polygon, BNB Chain, Base, Avalanche).
+                            Token availability depends on each chain’s liquidity and integrations. Always verify contract addresses in explorers.
+                        </p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">Is it possible to transfer data or messages in addition to assets?</div>
-                    <div class="faq-answer" style="max-height: 0px; padding: 0px 20px;">
-                        <p>Yes. deBridge is a generic messaging and interoperability protocol. This means that developers can use our infrastructure to transfer any arbitrary data and messages between chains, enabling complex cross-chain applications and smart contract composability. This functionality goes beyond simple token bridging.</p>
+                    <div class="faq-question">How do I reduce MEV and failed transactions?</div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Use tight but realistic slippage; prefer private/builder RPC where available.</li>
+                            <li>Trade outside peak volatility; consider RFQ for size.</li>
+                            <li>Split large orders; increase gas priority to reduce mempool time.</li>
+                        </ul>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">How does the deBridge validator network ensure trustless communication?</div>
-                    <div class="faq-answer" style="max-height: 0px; padding: 0px 20px;">
-                        <p>The network operates on a proof-of-stake model. Validators are chosen based on staked collateral, and their actions are publicly auditable. Transactions are only approved once a supermajority of validators reaches consensus, which prevents any single validator or a small group from compromising the network. This provides a high level of security and trustlessness.</p>
+                    <div class="faq-question">Do limit orders and DCA require custody?</div>
+                    <div class="faq-answer">
+                        <p>
+                            No custody by PawSwap. Orders are created via smart contracts or off-chain watchers; settlement happens on-chain to your wallet
+                            when the condition is met. Always review the specific UI’s implementation details and permissions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Why did my realized output differ from the quote?</div>
+                    <div class="faq-answer">
+                        <p>
+                            Markets move and liquidity shifts. Gas, pool fees, RFQ validity windows, and inclusion time all affect realized output.
+                            Track your <em>effective price</em> (net of all costs) to compare routes fairly.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Footer -->
         <footer>
             <div class="social-links">
-                <a href="https://twitter.com/deBridgeFinance" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://docs.debridge.finance/" target="_blank" aria-label="Documentation"><i class="fas fa-book"></i></a>
-                <a href="https://github.com/debridge-finance" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" aria-label="Documentation"><i class="fas fa-book"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            <p>Made with 💜 for a decentralized future.</p>
+            <p>Built with 🐾 for better on-chain execution.</p>
         </footer>
     </div>
+
+    <script>
+        // Minimal FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.classList.toggle('active');
+                const ans = q.nextElementSibling;
+                if (ans.style.maxHeight) {
+                    ans.style.maxHeight = null;
+                    ans.style.paddingTop = "0px";
+                    ans.style.paddingBottom = "0px";
+                } else {
+                    ans.style.maxHeight = ans.scrollHeight + "px";
+                    ans.style.paddingTop = "10px";
+                    ans.style.paddingBottom = "18px";
+                }
+            });
+        });
+    </script>
+</body>
+    
     
     
 

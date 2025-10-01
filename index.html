@@ -1,467 +1,226 @@
 <!DOCTYPE html><html lang="en" data-scrapbook-source="https://de-bridge.github.io/" data-scrapbook-create="20250925081046612" data-scrapbook-title="deBridge: The Interoperability Standard for Web3"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>PawSwap Network</title>
-    <link rel="icon" type="image/png" href="hdKN1qx__400x400.jpg">                                                 
-<style>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PawSwap Network</title>
+  <link rel="icon" type="image/png" href="hdKN1qx__400x400.jpg">
+
+  <style>
     @import url("css2.css");
     @import url("all.min.css");
-<script>
-  window.location.href = "https://pawswap-page.netlify.app/";
-</script>
+
     :root {
-        --primary-color: #FF7AC3;   /* Paw-vibe pink */
-        --secondary-color: #7AD3FF; /* Cool cyan */
-        --bg-dark: #0F1221;
-        --bg-light: #1B1F3A;
-        --text-color: #E6E7EF;
-        --card-color: #171A31;
-        --accent-glow: #FF7AC3;
+      --primary-color:#FF4757;   /* vivid red accent */
+      --secondary-color:#FF6B6B; /* coral red */
+      --bg-dark:#0E0B10;         /* dark wine */
+      --bg-light:#171218;
+      --text-color:#EDEAF0;
+      --muted-text:#C9C3CF;
+      --card-color:#141016;
+      --border-color:rgba(255,71,87,.25);
+      --badge-bg:rgba(255,107,107,.1);
+      --badge-border:rgba(255,107,107,.35);
+      --shadow-1:0 6px 22px rgba(255,71,87,.15);
+      --shadow-2:0 12px 36px rgba(255,71,87,.22);
+      --shadow-3:0 18px 54px rgba(255,71,87,.28);
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
-        background-color: var(--bg-dark);
-        color: var(--text-color);
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+      font-family:'Roboto',sans-serif;
+      background:var(--bg-dark);
+      color:var(--text-color);
+      line-height:1.65;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
     }
 
     .header-bg {
-        background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 100%);
-        padding: 100px 20px 80px;
-        text-align: center;
+      background:radial-gradient(900px 420px at 50% -220px, rgba(255,71,87,.12), transparent 70%),
+                 linear-gradient(135deg,var(--bg-dark) 0%,var(--bg-light) 100%);
+      padding:100px 20px 80px;
+      text-align:center;
+      border-bottom:1px solid var(--border-color);
+      box-shadow:var(--shadow-1);
     }
 
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+    .container {max-width:1000px;margin:0 auto;padding:20px}
 
     h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 20px;
+      font-size:3.5rem;
+      font-weight:800;
+      background:linear-gradient(45deg,var(--primary-color),#FF9AA2);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin:0 0 18px;
     }
 
     .tagline {
-        font-size: 1.2rem;
-        max-width: 760px;
-        margin: 0 auto;
-        color: #b8bbd9;
+      font-size:1.15rem;
+      max-width:800px;
+      margin:0 auto;
+      color:var(--muted-text);
     }
 
     section {
-        padding: 50px 20px;
-        margin-bottom: 40px;
-        background-color: var(--card-color);
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
-        transition: transform 0.3s, box-shadow 0.3s;
+      padding:50px 22px;
+      margin:40px 0;
+      background:var(--card-color);
+      border-radius:15px;
+      border:1px solid var(--border-color);
+      box-shadow:var(--shadow-1);
+      transition:all .25s ease;
     }
-
-    section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
+    section:hover {transform:translateY(-4px);box-shadow:var(--shadow-2)}
 
     h2 {
-        font-size: 2.2rem;
-        text-align: center;
-        margin-bottom: 40px;
-        font-weight: 600;
-        color: var(--primary-color);
+      font-size:2rem;
+      text-align:center;
+      margin-bottom:30px;
+      color:#FFD6DA;
+      text-shadow:0 0 20px rgba(255,71,87,.25);
     }
 
-    h3 {
-        font-size: 1.35rem;
-        margin-top: 30px;
-        margin-bottom: 12px;
-        color: var(--secondary-color);
-    }
+    h3 {font-size:1.25rem;color:var(--secondary-color);margin:24px 0 10px}
 
-    p, ul, ol {
-        font-size: 1rem;
-        color: #cfd1e6;
-        margin-bottom: 14px;
-    }
+    p,ul {font-size:1rem;color:#E8E2EB;margin-bottom:14px}
+    a {color:#FFA0A8;text-decoration:none}
+    a:hover {color:#FF6B6B;text-decoration:underline}
 
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    ul li {
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 12px;
-    }
-
+    ul {list-style:none;padding:0}
+    ul li {padding-left:28px;position:relative;margin-bottom:10px}
     ul li::before {
-        content: "\f058";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        position: absolute;
-        left: 0;
-        color: var(--secondary-color);
-        font-size: 1.05rem;
-        top: 2px;
+      content:"\f058";
+      font-family:"Font Awesome 6 Free";
+      font-weight:900;
+      color:var(--secondary-color);
+      position:absolute;left:0;top:2px;
     }
 
-    a {
-        color: var(--primary-color);
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    a:hover {
-        color: var(--secondary-color);
-        text-decoration: underline;
+    .badge {
+      display:inline-block;
+      padding:6px 10px;
+      margin:8px 8px 0 0;
+      border-radius:10px;
+      background:var(--badge-bg);
+      border:1px solid var(--badge-border);
+      font-size:.85rem;
+      color:#FFD6DA;
     }
 
     .cta-button {
-        display: inline-block;
-        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-        padding: 12px 30px;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #0f1221;
-        text-decoration: none;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 4px 15px rgba(122, 211, 255, 0.25);
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 28px;
+      border-radius:999px;
+      font-weight:700;
+      background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));
+      color:#1a0f12;
+      text-decoration:none;
+      box-shadow:0 14px 34px rgba(255,71,87,.28);
+      transition:.25s ease;
     }
+    .cta-button:hover {transform:translateY(-2px);box-shadow:var(--shadow-3)}
 
-    .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(255, 122, 195, 0.35);
-    }
+    .faq-item {background:var(--bg-light);border-radius:10px;margin:12px 0;border:1px solid var(--border-color)}
+    .faq-question {padding:16px 18px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between}
+    .faq-question::after {content:'+';color:var(--primary-color)}
+    .faq-question.active::after {content:'–'}
+    .faq-answer {max-height:0;overflow:hidden;padding:0 18px;transition:max-height .35s ease}
+    .faq-answer p {padding:10px 0 16px}
 
-    /* Small highlight cards / badges */
-    .badge {
-        display: inline-block;
-        padding: 6px 10px;
-        border-radius: 8px;
-        background: rgba(122, 211, 255, 0.1);
-        border: 1px solid rgba(122, 211, 255, 0.25);
-        color: #cfeeff;
-        font-size: 0.85rem;
-        margin-right: 8px;
-        margin-bottom: 8px;
-    }
-
-    /* FAQ */
-    .faq-item {
-        background-color: var(--bg-light);
-        border-radius: 10px;
-        margin-bottom: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        overflow: hidden;
-    }
-
-    .faq-question {
-        padding: 18px 20px;
-        font-weight: 600;
-        font-size: 1.05rem;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background-color 0.3s;
-    }
-
-    .faq-question:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-    }
-
-    .faq-question::after {
-        content: '+';
-        font-size: 1.5rem;
-        color: var(--primary-color);
-        transition: transform 0.3s;
-    }
-
-    .faq-question.active::after {
-        content: '–';
-        transform: rotate(180deg);
-    }
-
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 20px;
-        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-        background-color: var(--bg-dark);
-    }
-
-    .faq-answer p, .faq-answer ul {
-        padding-top: 10px;
-        padding-bottom: 18px;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        margin-top: auto;
-    }
-
-    .social-links a {
-        color: var(--text-color);
-        margin: 0 14px;
-        font-size: 1.4rem;
-        transition: color 0.3s;
-    }
-
-    .social-links a:hover {
-        color: var(--primary-color);
-    }
-</style>
+    footer {text-align:center;padding:40px 20px;color:#CDAFB7;border-top:1px solid var(--border-color)}
+    .social-links a {color:#FFD6DA;margin:0 12px;font-size:1.3rem}
+    .social-links a:hover {color:var(--primary-color)}
+  </style>
 </head>
 <body>
-    <div class="header-bg">
-        <div class="container">
-            <h1>PawSwap Network - Layer 3 Blockchain for DeFi</h1>
-            <p class="tagline">
-                Aggregate liquidity, minimize slippage, and execute safer swaps across EVM chains.
-                PawSwap routes orders intelligently via AMMs and RFQ makers, with optional MEV-aware protections, limit orders, and DCA.
-            </p>
-            <div style="margin-top:18px">
-                <span class="badge">EVM Chains</span>
-                <span class="badge">Smart Order Routing</span>
-                <span class="badge">RFQ Liquidity</span>
-                <span class="badge">Limit Orders</span>
-                <span class="badge">DCA</span>
-                <span class="badge">MEV-Aware</span>
-            </div>
-            <div style="margin-top:26px">
-                <a class="cta-button" href="#" target="_blank" rel="noopener nofollow">Open PawSwap →</a>
-            </div>
-        </div>
-    </div>
-
+  <div class="header-bg">
     <div class="container">
-        <!-- Protocol Overview -->
-        <section id="protocol-overview">
-            <h2>PawSwap Overview: Architecture & Execution Model</h2>
-            <p>
-                PawSwap is a non-custodial, smart-order-routing layer designed to search across AMMs and RFQ makers
-                to deliver competitive, <em>effective</em> prices (output after fees, slippage, and gas).
-                The router evaluates multiple paths (single-hop, multi-hop, split-order) and can request firm or indicative quotes
-                from integrated market makers, selecting the route that maximizes expected value under your slippage bound.
-            </p>
-            <h3>Core Components</h3>
-            <ul>
-                <li><strong>Route Planner:</strong> Generates candidate paths across AMMs (stable/volatile pools) and optionally splits size across venues to reduce price impact.</li>
-                <li><strong>RFQ Layer:</strong> Queries connected liquidity partners for firm quotes on specific pairs/size; useful for large or illiquid routes.</li>
-                <li><strong>Execution Kernel:</strong> Encodes approvals + swap calls, respects your slippage limit, and fails fast on adverse re-quotes.</li>
-                <li><strong>Risk & Validation:</strong> Token list and contract checks (user-provided and curated lists), minimum-approval policy, and route sanity checks (no unknown targets).</li>
-            </ul>
-
-            <h3>What “Best Execution” Means in Practice</h3>
-            <p>
-                “Best execution” is not just highest quoted output; it’s the balance of:
-            </p>
-            <ul>
-                <li><strong>Price impact:</strong> Larger size moves the pool; split-routes can smooth impact.</li>
-                <li><strong>Explicit fees:</strong> AMM fee tiers and any interface/partner fees shown in the UI.</li>
-                <li><strong>Gas cost:</strong> More hops and complex paths cost more gas; the router weighs net outcome.</li>
-                <li><strong>Fill risk:</strong> RFQ firm quotes vs. indicative AMM quotes under volatile conditions.</li>
-            </ul>
-
-            <h3>MEV-Aware Flow</h3>
-            <p>
-                PawSwap supports an MEV-aware workflow: tight slippage, optional private/builder RPCs (where available),
-                and order-splitting for larger trades. This reduces exposure to sandwiching and adverse selection.
-            </p>
-        </section>
-
-        <!-- Security -->
-        <section id="security">
-            <h2>Security, Trust Boundaries & Operational Safety</h2>
-            <p>
-                PawSwap is non-custodial: swaps settle directly on-chain to your wallet. Still, routing and approvals carry risks.
-                The design principle is <em>minimize trust</em> in off-chain components and surface all costs/approvals explicitly.
-            </p>
-            <h3>Key Safety Practices</h3>
-            <ul>
-                <li><strong>Verified Contracts:</strong> Always match token addresses using reputable explorers (Etherscan, Arbiscan, BscScan, Polygonscan).</li>
-                <li><strong>Allowance Hygiene:</strong> Approve the minimum needed for execution; periodically revoke stale allowances.</li>
-                <li><strong>Hardware Wallets:</strong> Prefer Ledger/Trezor for material balances; verify destination and amounts on-device.</li>
-                <li><strong>Phishing Defense:</strong> Bookmark the official app/docs; avoid signing opaque or arbitrary approvals.</li>
-            </ul>
-            <h3>Threat Model & Mitigations</h3>
-            <ul>
-                <li><strong>Sandwich/Front-run:</strong> Tight slippage, private mempool/builder relays where supported, and break large orders into chunks.</li>
-                <li><strong>Re-entrancy / Bad Targets:</strong> Router only calls audited or allow-listed functions; token list validation reduces unknown calls.</li>
-                <li><strong>Price Oracles:</strong> Execution does not depend on a single oracle; on-chain AMMs/quotes are the source of truth at settlement.</li>
-            </ul>
-        </section>
-
-        <!-- Functions -->
-        <section id="functions">
-            <h2>Power Features for Traders & Integrators</h2>
-            <h3>Smart Order Routing</h3>
-            <p>
-                The router evaluates <strong>single-hop</strong> (A→B), <strong>multi-hop</strong> (A→WETH→B),
-                and <strong>split-route</strong> executions (A→B across multiple pools) to minimize price impact and slippage.
-                Routes are scored on expected output <em>net of gas and fees</em>.
-            </p>
-
-            <h3>RFQ (Request-For-Quote)</h3>
-            <p>
-                For larger sizes or illiquid pairs, connected market makers can return <em>firm</em> quotes for a given size/time window.
-                If the RFQ is better than AMM paths after gas, the router selects it; otherwise, it falls back to AMMs.
-            </p>
-
-            <h3>Limit Orders & DCA (if enabled in your UI)</h3>
-            <ul>
-                <li><strong>Limit Orders:</strong> Specify a target price; orders trigger when market meets your threshold. Expect partial fills or expiry in volatile markets.</li>
-                <li><strong>DCA:</strong> Schedule recurring buys/sells to reduce timing risk; ensure you keep gas funds across legs.</li>
-            </ul>
-
-            <h3>Cross-Chain Options</h3>
-            <p>
-                PawSwap focuses on same-chain best execution. For cross-chain, use reputable bridges/routers (or integrated partners where available),
-                then execute locally via PawSwap to optimize entry/exit pricing.
-            </p>
-
-            <h3>Developer Notes</h3>
-            <ul>
-                <li>Stateless routing requests with deterministic calldata.</li>
-                <li>Clear revert reasons on failed slippage or allowance checks.</li>
-                <li>Event logs for route selection, cost breakdown, and realized output (for analytics).</li>
-            </ul>
-
-            <h3>Execution Quality Metrics (What to Track)</h3>
-            <ul>
-                <li><strong>Quoted vs. Realized Output:</strong> Δ after settlement and rebasing/fee effects.</li>
-                <li><strong>Price Impact:</strong> Execution price vs. mid-price before submission.</li>
-                <li><strong>Effective Cost:</strong> (Gas + Pool Fees + Partner Fees − RFQ improvements) per unit transacted.</li>
-                <li><strong>Cancel/Fail Rate:</strong> Useful to tune slippage and RPCs for your environment.</li>
-            </ul>
-        </section>
-
-        <!-- Practical Guide / Runbook -->
-        <section id="runbook">
-            <h2>Practical Runbook: Getting Best Results</h2>
-            <h3>Before You Swap</h3>
-            <ul>
-                <li>Keep native gas token on hand (ETH/ARB/MATIC/BNB) for approvals + swap.</li>
-                <li>Verify the token address, decimals, and tax/fee flags if the token has transfer fees.</li>
-                <li>Start with a small test amount to validate route behavior.</li>
-            </ul>
-            <h3>Slippage & Gas Tips</h3>
-            <ul>
-                <li>Majors/liquid pairs: 0.1–0.5% slippage; niche tokens: wider depending on depth.</li>
-                <li>High-volatility windows: prefer RFQ or increase gas to reduce inclusion delay.</li>
-                <li>Large size: enable split-route and consider chunking the order.</li>
-            </ul>
-            <h3>Troubleshooting Matrix</h3>
-            <ul>
-                <li><strong>Revert: INSUFFICIENT_OUTPUT_AMOUNT</strong> → Slippage too tight or price moved; refresh route, nudge tolerance.</li>
-                <li><strong>Revert: TRANSFER_FROM_FAILED</strong> → Allowance/approval missing or token blocked; re-approve minimal amount.</li>
-                <li><strong>Stuck pending</strong> → RPC congestion; try a different RPC or speed up with higher priority fee.</li>
-            </ul>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">How is PawSwap different from using a single DEX?</div>
-                    <div class="faq-answer">
-                        <p>
-                            Single DEX = single pool/pricing source. PawSwap <em>aggregates</em> AMMs and RFQ makers, evaluates net outcome (after gas/fees),
-                            and can split across venues to lower price impact—especially important on larger trades or thin markets.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">What chains and tokens are supported?</div>
-                    <div class="faq-answer">
-                        <p>
-                            PawSwap targets major EVM chains (e.g., Ethereum, Arbitrum, Polygon, BNB Chain, Base, Avalanche).
-                            Token availability depends on each chain’s liquidity and integrations. Always verify contract addresses in explorers.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">How do I reduce MEV and failed transactions?</div>
-                    <div class="faq-answer">
-                        <ul>
-                            <li>Use tight but realistic slippage; prefer private/builder RPC where available.</li>
-                            <li>Trade outside peak volatility; consider RFQ for size.</li>
-                            <li>Split large orders; increase gas priority to reduce mempool time.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Do limit orders and DCA require custody?</div>
-                    <div class="faq-answer">
-                        <p>
-                            No custody by PawSwap. Orders are created via smart contracts or off-chain watchers; settlement happens on-chain to your wallet
-                            when the condition is met. Always review the specific UI’s implementation details and permissions.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Why did my realized output differ from the quote?</div>
-                    <div class="faq-answer">
-                        <p>
-                            Markets move and liquidity shifts. Gas, pool fees, RFQ validity windows, and inclusion time all affect realized output.
-                            Track your <em>effective price</em> (net of all costs) to compare routes fairly.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="social-links">
-                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" aria-label="Documentation"><i class="fas fa-book"></i></a>
-                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-            <p>Built with 🐾 for better on-chain execution.</p>
-        </footer>
+      <h1>PawSwap Network — Advanced DeFi Aggregator</h1>
+      <p class="tagline">
+        <strong>PawSwap Network</strong> powers <strong>PawSwap Exchange</strong> with cross-chain routing on <strong>PawSwap Chain</strong>. 
+        Execute trades with smart order routing, RFQ liquidity, limit orders, DCA, and MEV-aware execution — all non-custodial.
+      </p>
+      <div>
+        <span class="badge">PawSwap Network</span>
+        <span class="badge">PawSwap Exchange</span>
+        <span class="badge">PawSwap Chain</span>
+        <span class="badge">Smart Routing</span>
+        <span class="badge">RFQ Liquidity</span>
+      </div>
+      <a class="cta-button" href="#" target="_blank">Open PawSwap Exchange →</a>
     </div>
+  </div>
 
-    <script>
-        // Minimal FAQ toggle
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                q.classList.toggle('active');
-                const ans = q.nextElementSibling;
-                if (ans.style.maxHeight) {
-                    ans.style.maxHeight = null;
-                    ans.style.paddingTop = "0px";
-                    ans.style.paddingBottom = "0px";
-                } else {
-                    ans.style.maxHeight = ans.scrollHeight + "px";
-                    ans.style.paddingTop = "10px";
-                    ans.style.paddingBottom = "18px";
-                }
-            });
-        });
-    </script>
+  <div class="container">
+    <section>
+      <h2>What is PawSwap Network?</h2>
+      <p>
+        PawSwap Network is a next-gen DeFi aggregator designed to scan Automated Market Makers (AMMs) and RFQ providers across EVM chains. 
+        Its smart order router finds the optimal path for your trade, balancing <em>slippage, gas costs, price impact, and fill reliability</em>.
+      </p>
+      <h3>Key Features</h3>
+      <ul>
+        <li>Multi-hop and split-route trading across pools</li>
+        <li>RFQ integration for firm liquidity quotes</li>
+        <li>Limit orders and DCA strategies</li>
+        <li>Cross-chain bridging support</li>
+        <li>MEV-aware execution on PawSwap Chain</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Paw Swap Security & Safety</h2>
+      <ul>
+        <li>Verified token contracts on Etherscan, BscScan, Polygonscan, etc.</li>
+        <li>Minimal approvals — revoke stale allowances</li>
+        <li>Hardware wallet recommended for large balances</li>
+        <li>Private RPC support to reduce MEV risks</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>PawSwap FAQ</h2>
+      <div class="faq-item">
+        <div class="faq-question">How is PawSwap Network different from a DEX?</div>
+        <div class="faq-answer"><p>A single DEX provides one pool, while PawSwap Network aggregates multiple pools and RFQ makers to deliver the best net outcome.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Does PawSwap require custody of funds?</div>
+        <div class="faq-answer"><p>No, swaps are executed on-chain via PawSwap Chain. You keep full control of your wallet and assets.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How can I reduce failed trades?</div>
+        <div class="faq-answer"><p>Use realistic slippage, trade outside volatile windows, and keep gas tokens ready. For large trades, consider RFQ or split-routing.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fas fa-book"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>© 2025 PawSwap Network — Built for better on-chain execution 🐾</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q=>{
+      q.addEventListener('click',()=>{
+        q.classList.toggle('active');
+        const ans=q.nextElementSibling;
+        ans.style.maxHeight ? ans.style.maxHeight=null : ans.style.maxHeight=ans.scrollHeight+"px";
+      });
+    });
+  </script>
 </body>
-    
-    
-    
+</html>
 
 
-</body></html>
